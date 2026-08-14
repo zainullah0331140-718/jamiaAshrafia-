@@ -41,6 +41,7 @@ html {
 }
 
 body {
+
   margin: 0;
   color: var(--ink);
   background: #bcb7b7cc;
@@ -88,6 +89,7 @@ img {
   backdrop-filter: blur(18px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, .06);
   border-bottom: 1px solid rgba(201, 160, 74, .16)
+  
 }
 
 .navwrap {
@@ -165,7 +167,7 @@ img {
   right: 0;
   top: 49px;
   width: 255px;
-  background: #fff;
+  background: #616060;
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 8px;
@@ -198,38 +200,69 @@ img {
   padding: 5px 12px
 }
 
+/* ==========================================
+   1. Urdu Fonts Setup
+   ========================================== */
+
+/* AlQalam Alvi Nastaleeq Font Definition */
+@font-face {
+  font-family: 'AlQalamAlviNastaleeq';
+  src: local('AlQalam Alvi Nastaleeq'),
+       local('AlQalam Alvi Nastaleeq Regular'),
+       url('assets/fonts/AlQalam-Alvi-Nastaleeq.woff2') format('woff2'),
+       url('assets/fonts/AlQalam-Alvi-Nastaleeq.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Jameel Noori Nastaleeq Font Definition */
+@font-face {
+  font-family: 'JameelNoori';
+  src: local('Jameel Noori Nastaleeq'),
+       local('Jameel Noori Nastaleeq Regular'),
+       local('Jameel Noori Nastaleeq Kasheeda'),
+       url('assets/fonts/Jameel-Noori-Nastaleeq.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ==========================================
+   2. Base & Typography Styles
+   ========================================== */
+
+body {
+  font-family: 'JameelNoori', 'Jameel Noori Nastaleeq', 'AlQalamAlviNastaleeq', serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   3. Hero Section Styles
+   ========================================== */
+
 .hero {
- 
   position: relative;
   min-height: 720px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--g)
 }
 
-/* 1. Parent Element پر پوزیشن سیٹ کریں */
-.hero {
-  position: relative;
-  min-height: 500px;
-  overflow: hidden; /* امیج کو باہر نکلنے سے روکنے کے لیے */
-}
-
-/* 2. Pseudo Element */
+/* Dark Background Image Overlay */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url('mas.webp');
+  /* 0.65 کا مطلب 65% ڈارک شیڈ ہے تاکہ تحریر بالکل واضح نظر آئے */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('mas.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* ٹیکسٹ کے نیچے رکھنے کے لیے */
 }
 
-.hero:after {
+/* Decorative Circle Effect */
+.hero::after {
   content: "";
   position: absolute;
   width: 620px;
@@ -238,15 +271,17 @@ img {
   border-radius: 50%;
   left: -180px;
   top: -180px;
-  box-shadow: 0 0 0 45px rgba(239, 209, 138, .045), 0 0 0 95px rgba(239, 209, 138, .025)
+  box-shadow: 0 0 0 45px rgba(239, 209, 138, .045), 0 0 0 95px rgba(239, 209, 138, .025);
+  pointer-events: none;
 }
 
+/* Hero Content Styling */
 .hero-content {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #ffffff;
   padding: 105px 0;
-  max-width: 780px
+  max-width: 780px;
 }
 
 .kicker {
@@ -260,7 +295,7 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(44px, 6vw, 78px);
+  font-size: 20px;
   line-height: 1.38;
   margin: 16px 0
 }
@@ -848,8 +883,8 @@ textarea {
 }
 
 footer {
-  background: #47390d;
-  color: #dbe8e1;
+  background: #333507ec;
+  color: #f4f7f4;
   padding-top: 60px;
   position: relative;
   overflow: hidden
