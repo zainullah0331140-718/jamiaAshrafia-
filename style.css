@@ -15,21 +15,25 @@
 }
 
 :root {
-  --g: #063d2e;
-  --g2: #0b6b4f;
-  --g3: #0f8966;
-  --gold: #c9a04a;
+  --g: #31310ee1;
+  --g2: #3b3b03;
+  --g3: #312908;
+  --gold: #433005;
   --gold2: #efd18a;
   --cream: #fbf8f0;
-  --ink: #18342b;
-  --muted: #687a72;
+  --ink: #9b8722;
+  --muted: #32250a;
   --line: #e9e3d5;
-  --shadow: 0 20px 60px rgba(5, 50, 37, .13);
-  --r: 22px
+  --shadow: 0 20px 60px rgba(30, 213, 161, 0.13);
+  --r: 25px
 }
 
 * {
   box-sizing: border-box
+}
+img{
+  border-radius: 5px;
+  box-shadow: #9a7730;
 }
 
 html {
@@ -39,7 +43,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: #fff;
+  background: #bcb7b7cc;
   font-family: 'Jameel Noori Nastaleeq Regular', 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
   line-height: 2.05
 }
@@ -57,18 +61,18 @@ img {
 .wrap {
   width: min(1300px,92%);
   margin:auto;
-  padding: 2px;
+  padding: 10px;
 }
 
 .topbar {
-  background: #a3a36b;
-  color: #fdfdfd;
+  background: #e7c508;
+  color: #070707;
   font-size: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, .08)
 }
 
 .topbar .wrap {
-  min-height: 38px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +80,7 @@ img {
 }
 
 .topbar a {
-  margin-right: 18px;
+  margin-right: 20px;
   color: #fff
 }
 
@@ -106,8 +110,8 @@ img {
 }
 
 .brand img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: contain
 }
 
@@ -211,7 +215,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(2, 38, 28, .94) 0%, rgba(4, 62, 46, .76) 42%, rgba(4, 62, 46, .25) 100%), url("assets/photo-12.jpg") center/cover
+  background: linear-gradient(90deg, rgba(126, 86, 4, 0.94) 0%, rgba(117, 111, 37, 0.582) 42%, rgba(60, 69, 9, 0.25) 100%), url("assets/photo-12.jpg") center/cover
 }
 
 .hero:after {
@@ -833,7 +837,7 @@ textarea {
 }
 
 footer {
-  background: #7e6107;
+  background: #47390d;
   color: #dbe8e1;
   padding-top: 60px;
   position: relative;
@@ -860,8 +864,8 @@ footer:before {
 }
 
 .footer-logo {
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
   object-fit: contain
 }
 
