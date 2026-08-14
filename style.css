@@ -1142,3 +1142,488 @@ textarea,
 select {
   font-family: 'Jameel Noori Nastaleeq Regular', 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
 }
+/* ================================
+   MOBILE RESPONSIVE FIX
+================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main container */
+.wrap {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Header */
+.navwrap {
+  width: 100%;
+  min-height: 75px;
+}
+
+/* Mobile navigation */
+@media (max-width: 1100px) {
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    left: 15px;
+
+    width: auto;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    padding: 10px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
+
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav > a,
+  .dropbtn {
+    width: 100%;
+    text-align: right;
+    padding: 12px 15px;
+    font-size: 18px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .dropmenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding: 70px 0;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .people {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news,
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footergrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    font-size: 18px;
+  }
+
+  .brand {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brand strong {
+    font-size: 20px;
+  }
+
+  .hero {
+    min-height: 570px;
+  }
+
+  .hero-content {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .quickgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .heading h2,
+  .center h2,
+  .copy h2 {
+    font-size: 32px;
+  }
+
+  .photo img {
+    height: 350px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar {
+    font-size: 16px;
+  }
+
+  .topbar .wrap {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+  }
+
+  .topbar a {
+    margin: 0 5px;
+  }
+
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .navwrap {
+    min-height: 70px;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand strong {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .menu {
+    font-size: 23px;
+    padding: 5px 10px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero-content {
+    padding: 55px 0;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.55;
+    margin: 12px 0;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .actions {
+    gap: 8px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 9px 17px;
+  }
+
+  .stats {
+    gap: 20px;
+    margin-top: 25px;
+  }
+
+  .stats strong {
+    font-size: 27px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  /* Quick menu */
+  .quick {
+    margin-top: -30px;
+  }
+
+  .quickgrid {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+  }
+
+  .quickgrid a {
+    padding: 18px 10px;
+  }
+
+  .quickgrid b {
+    font-size: 18px;
+  }
+
+  .quickgrid small {
+    font-size: 13px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 50px 0;
+  }
+
+  .heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .heading h2,
+  .center h2,
+  .copy h2,
+  .pagehero h1 {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+  .heading p,
+  .center p {
+    font-size: 16px;
+  }
+
+  /* All grids one column */
+  .cards,
+  .people,
+  .steps,
+  .news,
+  .video-grid,
+  .gallery,
+  .contact,
+  .footergrid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    min-height: auto;
+  }
+
+  .photo img {
+    height: 300px;
+  }
+
+  .ticks,
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  /* People */
+  .person img {
+    height: 300px;
+  }
+
+  /* Gallery */
+  .gallery img {
+    height: 240px;
+  }
+
+  /* Contact */
+  .contact {
+    gap: 25px;
+  }
+
+  /* Table */
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 40px;
+  }
+
+  .footergrid {
+    gap: 25px;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+  .brand strong {
+    font-size: 16px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .quickgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickgrid a {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .heading h2,
+  .center h2,
+  .copy h2,
+  .pagehero h1 {
+    font-size: 27px;
+  }
+}
+
+
+/* ================================
+   RESPONSIVE WHATSAPP
+================================ */
+
+.wa {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: #15945d;
+  color: #fff;
+
+  border: 3px solid #fff;
+  border-radius: 50%;
+
+  text-decoration: none;
+  line-height: 0;
+
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+
+  transition: .3s ease;
+}
+
+.wa svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.wa:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .wa {
+    width: 52px;
+    height: 52px;
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .wa svg {
+    width: 29px;
+    height: 29px;
+  }
+}
