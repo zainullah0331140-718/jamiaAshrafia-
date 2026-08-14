@@ -1627,3 +1627,448 @@ img {
     height: 29px;
   }
 }
+
+/* =========================================================
+   JAMIA ASHRAFIA — FINAL MOBILE + DESKTOP TYPOGRAPHY FIX
+   Jameel Noori Nastaleeq / RTL / responsive layout
+   ========================================================= */
+
+/* Prevent horizontal overflow on phones */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  /* Urdu/Nastaleeq shaping */
+  font-family: 'Jameel Noori Nastaleeq Regular',
+               'Jameel Noori Nastaleeq',
+               'Noto Nastaliq Urdu',
+               serif;
+
+  font-weight: 400;
+  font-style: normal;
+
+  /* IMPORTANT: do not separate Nastaleeq letters */
+  letter-spacing: 0;
+  word-spacing: .08em;
+  font-kerning: normal;
+  font-feature-settings: normal;
+  font-variant-ligatures: normal;
+  text-rendering: optimizeLegibility;
+
+  line-height: 2.15;
+}
+
+/* Urdu text should not be artificially spaced */
+h1, h2, h3, h4, h5, h6,
+p, li, a, button, label,
+.nav > a, .dropbtn,
+.quickgrid b, .quickgrid small,
+.card h3, .card p,
+.step h3, .step p,
+.person h3, .person p,
+.news h3, .news p,
+.footergrid h3, .footergrid h4,
+.footergrid a,
+.pagehero,
+.copy,
+.notice,
+.ticks span,
+.info b,
+.info span {
+  letter-spacing: 0 !important;
+  font-kerning: normal;
+  font-feature-settings: normal;
+  font-variant-ligatures: normal;
+  word-spacing: .06em;
+}
+
+/* Keep Latin / small English text normal */
+.brand small,
+.stats strong,
+.play {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+/* Never allow media or cards to force the page wider */
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+.wrap {
+  width: min(1300px, calc(100% - 30px));
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+/* Better navigation sizing */
+.nav > a,
+.dropbtn {
+  line-height: 1.8;
+}
+
+/* Better Urdu headings */
+.hero h1,
+.heading h2,
+.center h2,
+.copy h2,
+.pagehero h1 {
+  letter-spacing: 0 !important;
+  word-spacing: .08em;
+  line-height: 1.65;
+}
+
+/* Buttons must remain readable on small screens */
+.btn {
+  line-height: 1.8;
+  min-height: 46px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 1100px) {
+  .navwrap {
+    min-height: 80px;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .brand img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .brand strong {
+    font-size: 24px;
+  }
+
+  .nav {
+    max-width: calc(100vw - 30px);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 680px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    width: calc(100% - 24px);
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .topbar {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .topbar .wrap {
+    min-height: 36px;
+    padding: 4px 0;
+    gap: 5px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .navwrap {
+    min-height: 68px;
+    gap: 8px;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 55px);
+    gap: 7px;
+  }
+
+  .brand img {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+  }
+
+  .brand strong {
+    min-width: 0;
+    font-size: 18px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .menu {
+    flex: 0 0 auto;
+    display: block;
+    font-size: 23px;
+    padding: 5px 10px;
+  }
+
+  /* Mobile menu */
+  .nav {
+    position: absolute;
+    top: 72px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 85px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 8px;
+    gap: 3px;
+    border-radius: 16px;
+  }
+
+  .nav > a,
+  .dropbtn {
+    width: 100%;
+    min-height: 46px;
+    padding: 8px 12px;
+    font-size: 18px;
+    line-height: 1.9;
+    white-space: normal;
+    text-align: right;
+  }
+
+  .dropmenu {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .dropmenu a {
+    font-size: 17px;
+    line-height: 1.9;
+    white-space: normal;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 55px 0 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.75;
+    margin: 10px 0 16px;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 2.15;
+  }
+
+  .actions {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .stats {
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 52px 0;
+  }
+
+  .heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .heading h2,
+  .center h2,
+  .copy h2,
+  .pagehero h1 {
+    font-size: clamp(27px, 7vw, 34px);
+    line-height: 1.75;
+  }
+
+  .heading p,
+  .center p,
+  .copy p {
+    font-size: 16px;
+    line-height: 2.15;
+  }
+
+  /* Single column prevents cramped text */
+  .split,
+  .cards,
+  .steps,
+  .people,
+  .news,
+  .video-grid,
+  .gallery,
+  .contact,
+  .footergrid {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    gap: 30px;
+  }
+
+  .card,
+  .step,
+  .form,
+  .info div {
+    padding: 20px;
+  }
+
+  .card h3,
+  .step h3,
+  .person h3,
+  .news h3 {
+    font-size: 21px;
+    line-height: 1.8;
+  }
+
+  .card p,
+  .step p,
+  .person p,
+  .news p {
+    font-size: 16px;
+    line-height: 2.15;
+    min-height: auto;
+  }
+
+  .photo img {
+    height: auto;
+    min-height: 250px;
+    max-height: 420px;
+  }
+
+  .person img {
+    height: auto;
+    max-height: 360px;
+  }
+
+  .gallery img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Tables scroll instead of breaking the page */
+  .table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+    padding: 11px;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 45px;
+  }
+
+  .footergrid {
+    gap: 28px;
+  }
+
+  .footergrid a {
+    line-height: 2;
+  }
+
+  /* WhatsApp */
+  .wa {
+    width: 52px !important;
+    height: 52px !important;
+    left: 14px !important;
+    bottom: 14px !important;
+    z-index: 99999;
+  }
+
+  .wa svg {
+    width: 29px !important;
+    height: 29px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+
+  .wrap {
+    width: calc(100% - 20px);
+  }
+
+  .brand strong {
+    font-size: 16px;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p,
+  .copy p,
+  .card p,
+  .step p,
+  .person p,
+  .news p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .quickgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickgrid a {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
